@@ -54,7 +54,7 @@ const Home = () => {
             list="coinlist"
           />
           <datalist id="coinlist">
-                {allCoins.slice(0,10).map((item, index)=>{
+                {allCoins.map((item, index)=>{
                     return(<option key={index} value={item.name}/>)
                 })}
           </datalist>
@@ -76,7 +76,7 @@ const Home = () => {
             </p>
             <p className="basis-[20%] text-right hidden md:block">Market Cap</p>
           </div>
-          {displayCoin.map((item, index) => {
+          {displayCoin.slice(0,10).map((item, index) => {
             return (
               <div
                 key={index}
