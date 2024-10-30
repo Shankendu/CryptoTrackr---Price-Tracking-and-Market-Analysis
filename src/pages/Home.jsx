@@ -12,6 +12,9 @@ const Home = () => {
 
   const handleChange = (e) => {
     setInputValue(e.target.value);
+    if (inputValue == "") {
+        setDisplayCoin(allCoins);
+      }
   };
 
   const handleSearch = (e) => {
@@ -19,18 +22,12 @@ const Home = () => {
     let filterData = displayCoin.filter((item) => {
       return item.name.toLowerCase().includes(inputValue.toLowerCase());
     });
-
-    if (inputValue == "") {
-      setDisplayCoin(allCoins.slice(0, 10));
-    } else {
       setDisplayCoin(filterData);
-      setInputValue("")
-    }
   };
   return (
     <>
       <div className="w-full flex flex-col pb-5 lg:pb-[80px] mt-5 lg:mt-[80px] mx-auto items-center justify-center gap-y-[20px] lg:gap-y-[30px] text-center font-poppins px-3 sm:px-4 md:px-6 lg:px-10 text-[#e9e9e9]">
-        <h1 className="font-black text-[26px] sm:text-5xl md:text-5xl lg:text-5xl text-[#e9e9e9]">
+        <h1 className="font-black text-[34px] sm:text-5xl md:text-5xl lg:text-5xl text-[#e9e9e9]">
           Largest <br />
           Crypto{" "}
           <span className=" text-transparent bg-gradient-to-br from-[#c55cf6] from-[30%] via-[#85025d] to-[#c55cf6] to-[80%] bg-clip-text ">

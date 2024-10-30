@@ -70,7 +70,7 @@ const Navbar = () => {
         </section>
 
         {/* Buttons - Section 3 */}
-        <section className="text-[10px] sm:text-xs md:text-sm lg:text-base flex flex-row items-center font-medium gap-x-1 sm:gap-x-3">
+        <section className="text-[10px] sm:text-xs md:text-sm lg:text-base flex flex-row items-center font-medium gap-x-3">
           <select
             onChange={currencyHandler}
             className="bg-transparent border-2 border-[#a7a5dd] px-1 py-1.5 md:p-2 rounded-md outline-none text-[#e9e9e9]"
