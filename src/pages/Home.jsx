@@ -34,7 +34,7 @@ const Home = () => {
             Marketplace
           </span>
         </h1>
-        <p className="text-xs sm:text-base md:text-base lg:text-base w-[80%] sm:w-[80%] md:w-[50%] lg:w-[50%] leading-6 text-[#e9e9e9cb]">
+        <p className="text-sm sm:text-base md:text-base lg:text-base w-[80%] sm:w-[80%] md:w-[50%] lg:w-[50%] leading-6 text-[#e9e9e9cb]">
           Welcome to the world&apos;s largest cryptocurrency marketplace. Sign
           up to explore more about cryptos.
         </p>
@@ -57,7 +57,7 @@ const Home = () => {
           </datalist>
 
           <button
-            className="border-none px-[30px] py-[5px] text-base bg-[#54083d] hover:bg-[#85025d] transition-all rounded-md cursor-pointer"
+            className="border-none px-[15px] sm:px-[30px] py-[5px] text-sm sm:text-base bg-[#54083d] hover:bg-[#85025d] transition-all rounded-md cursor-pointer"
             type="submit"
           >
             Search
