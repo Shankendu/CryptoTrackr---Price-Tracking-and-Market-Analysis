@@ -48,6 +48,7 @@ const Navbar = () => {
       }
     }
   };
+
   return (
     <>
       <nav className="w-full flex flex-row items-center justify-between px-3 sm:px-4 md:px-6 lg:px-10 py-4 font-poppins">
@@ -65,7 +66,7 @@ const Navbar = () => {
             </NavLink>
             <li className="cursor-pointer hover:text-[#a7a5dd] transition-all">Features</li>
             <li className="cursor-pointer hover:text-[#a7a5dd] transition-all">Pricing</li>
-            <li className="cursor-pointer hover:text-[#a7a5dd] transition-all">Blogs</li>
+            <NavLink to="/news" className="cursor-pointer hover:text-[#a7a5dd] transition-all">News</NavLink>
           </ul>
         </section>
 

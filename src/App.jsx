@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Coin from "./pages/Coin";
 import Footer from "./components/Footer";
+import News from "./pages/News";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/news" element={<News />} />
           <Route path="/coin/:coinId" element={<Coin />} />
         </Routes>
         <Footer/>
