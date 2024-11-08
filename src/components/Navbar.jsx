@@ -74,12 +74,12 @@ const Navbar = () => {
         {/* Menu Link - Section 2 */}
         <section className="hidden md:block">
           <ul className="flex flex-row md:gap-x-5 lg:gap-x-10 text-[#e9e9e9] text-base items-center">
-            <NavLink to="/" className="cursor-pointer hover:text-[#a7a5dd] transition-all">
+            <NavLink to="/" className="cursor-pointer hover:text-[#a7a5dd] transition-all [&.active]:text-[#a7a5dd]">
               Home
             </NavLink>
-            <li className="cursor-pointer hover:text-[#a7a5dd] transition-all">Features</li>
-            <li className="cursor-pointer hover:text-[#a7a5dd] transition-all">Pricing</li>
-            <NavLink to="/news" className="cursor-pointer hover:text-[#a7a5dd] transition-all">News</NavLink>
+            <NavLink to="/features" className="cursor-pointer hover:text-[#a7a5dd] transition-all [&.active]:text-[#a7a5dd]">Features</NavLink>
+            <NavLink to="/trending" className="cursor-pointer hover:text-[#a7a5dd] transition-all [&.active]:text-[#a7a5dd]">Trending</NavLink>
+            <NavLink to="/news" className="cursor-pointer hover:text-[#a7a5dd] transition-all [&.active]:text-[#a7a5dd]">News</NavLink>
           </ul>
         </section>
 
@@ -125,12 +125,12 @@ const Navbar = () => {
      {open && <div id="Ham-Links" className="h-screen w-full fixed top-0 bg-gradient-to-b from-[#000421] via-[#20062c] to-[#340732] z-40 inline-flex flex-col justify-between md:hidden py-20 px-10 overflow-hidden" >
       <section className="">
           <ul className="flex flex-col items-start text-[#a7a5dd] text-3xl gap-y-5 ">
-            <NavLink to="/" onClick={()=>setOpen(!open)} className="cursor-pointer hover:text-[#a7a5dd] transition-all">
+            <NavLink to="/"  onClick={()=>setOpen(!open)} className={` cursor-pointer hover:text-[#a7a5dd] transition-all [&.active]:text-[#a7a5dd]`}>
               Home
             </NavLink>
-            <li onClick={()=>setOpen(!open)} className="cursor-pointer hover:text-[#a7a5dd] transition-all">Features</li>
-            <li onClick={()=>setOpen(!open)} className="cursor-pointer hover:text-[#a7a5dd] transition-all">Pricing</li>
-            <NavLink to="/news" onClick={()=>setOpen(!open)} className="cursor-pointer hover:text-[#a7a5dd] transition-all">News</NavLink>
+            <NavLink to="/features" onClick={()=>setOpen(!open)} className="cursor-pointer hover:text-[#a7a5dd] transition-all [&.active]:text-[#a7a5dd]">Features</NavLink>
+            <NavLink to="/trending" onClick={()=>setOpen(!open)} className="cursor-pointer hover:text-[#a7a5dd] transition-all [&.active]:text-[#a7a5dd]">Trending</NavLink>
+            <NavLink to="/news" onClick={()=>setOpen(!open)} className="cursor-pointer hover:text-[#a7a5dd] transition-all [&.active]:text-[#a7a5dd]">News</NavLink>
           </ul>
         </section>
 

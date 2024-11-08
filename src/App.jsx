@@ -4,6 +4,8 @@ import Home from "./pages/Home";
 import Coin from "./pages/Coin";
 import Footer from "./components/Footer";
 import News from "./pages/News";
+import Features from "./pages/Features";
+import Trending from "./pages/Trending";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/trending" element={<Trending />} />
           <Route path="/news" element={<News />} />
           <Route path="/coin/:coinId" element={<Coin />} />
         </Routes>
