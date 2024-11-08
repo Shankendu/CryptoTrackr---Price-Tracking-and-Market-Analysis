@@ -13,6 +13,7 @@ const News = () => {
     setLoading(true)
     const options = {
       method: "GET",
+      mode: "cors",
       headers: {
         accept: "application/json",
         TI_API_KEY: import.meta.env.VITE_APP_KEY_TWO,
