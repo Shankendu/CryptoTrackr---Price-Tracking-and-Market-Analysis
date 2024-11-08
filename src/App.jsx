@@ -8,7 +8,7 @@ import News from "./pages/News";
 function App() {
   return (
     <>
-      <div className="w-full flex flex-col justify-between min-h-screen bg-gradient-to-b from-[#000421] via-[#20062c] to-[#340732] text-white">
+      <div className="w-full flex flex-col justify-between min-h-screen bg-gradient-to-b from-[#000421] via-[#20062c] to-[#340732] text-white overflow-hidden">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

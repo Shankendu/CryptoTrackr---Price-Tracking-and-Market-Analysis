@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Shimmer from "../components/Shimmer";
 
 const Home = () => {
-  const { allCoins, currency,loading } = useContext(CoinContext);
+  const { allCoins, currency,loading, open } = useContext(CoinContext);
   const [displayCoin, setDisplayCoin] = useState([]);
   const [inputValue, setInputValue] = useState("");
 
@@ -26,9 +26,10 @@ const Home = () => {
     });
       setDisplayCoin(filterData);
   };
-  return loading ? (<Shimmer/>) : (
+  
+  return (loading ) ? (<Shimmer/>) : (
     <>
-      <div className="w-full flex flex-col pb-5 lg:pb-[80px] pt-5 lg:pt-[80px] mx-auto items-center justify-center gap-y-[20px] lg:gap-y-[30px] text-center font-poppins px-3 sm:px-4 md:px-6 lg:px-10 text-[#e9e9e9] relative overflow-x-hidden">
+      <div className={`w-full flex flex-col pb-5 lg:pb-[80px] pt-5 lg:pt-[80px] mx-auto items-center justify-center gap-y-[20px] lg:gap-y-[30px] text-center font-poppins px-3 sm:px-4 md:px-6 lg:px-10 text-[#e9e9e9] relative overflow-x-hidden ${open? "overflow-hidden" : "overflow-auto"}`}>
         <h1 className="font-black text-[34px] sm:text-5xl md:text-5xl lg:text-5xl text-[#e9e9e9] z-10">
           Largest <br />
           Crypto{" "}

@@ -8,14 +8,14 @@ const Coin = () => {
   const { coinId } = useParams();
   const [coinData, setCoinData] = useState();
   const [historicalData, setHistoricalData] = useState();
-  const { currency } = useContext(CoinContext);
+  const { currency, open } = useContext(CoinContext);
 
   const getCoinData = async () => {
     const options = {
       method: "GET",
       headers: {
         accept: "application/json",
-        "x-cg-demo-api-key": "CG-DezjHvLbRZkuYbonLU1uSzAp",
+        "x-cg-demo-api-key": import.meta.env.VITE_APP_KEY_ONE,
       },
     };
 
@@ -47,7 +47,7 @@ const Coin = () => {
     getHistoricalData();
   }, [currency]);
 
-  if (coinData && historicalData) {
+  if (coinData && historicalData && !open) {
     return (
       <div className="overflow-hidden relative font-poppins text-[#e9e9e9]">
         <section className="px-5">
