@@ -1,14 +1,17 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { CoinContext } from "../context/CoinContext";
+import TrendingShimmer from "../components/TrendingShimmer";
 
 const Trending = () => {
   const [trendingCoin, setTrendingCoin] = useState([]);
+  const {loading} = useContext(CoinContext)
 
   const getTrendingCoin = async () => {
     const options = {
       method: "GET",
       headers: {
         accept: "application/json",
-        "x-cg-demo-api-key": "CG-DezjHvLbRZkuYbonLU1uSzAp",
+        "x-cg-demo-api-key": import.meta.env.VITE_APP_KEY_ONE,
       },
     };
 
@@ -21,7 +24,9 @@ const Trending = () => {
     getTrendingCoin();
   }, []);
 
-  return (
+  return loading? <TrendingShimmer/> : (
+    <>
+    <h1 className="text-center font-black text-4xl mt-10 font-poppins text-[#e9e9e9]">Trending</h1>
     <div className="p-10 flex flex-wrap items-center justify-center gap-10">
       {Object.values(trendingCoin).map((item, index) => {
         console.log(item);
@@ -47,6 +52,7 @@ const Trending = () => {
         );
       })}
     </div>
+    </>
   );
 };
 

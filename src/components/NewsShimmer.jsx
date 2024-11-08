@@ -12,7 +12,7 @@ const NewsShimmer = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {Array(8).fill('').map((e,i)=>{
                 return(
-                    <div key={i} className="bg-white rounded-lg shadow-lg p-8 h-[500px] w-[350px]">
+                    <div key={i} className="bg-white rounded-lg shadow-lg p-8 h-[480px] max-w-[350px]">
               <div className="relative overflow-hidden">
                 <div className="object-cover w-[100%] h-[200px] bg-gray-300 animate-pulse"></div>
               </div>
