@@ -49,37 +49,72 @@ const Navbar = () => {
     }
   };
 
-  const handleHam = async () =>{
-    setOpen(!open)
-  }
+  const handleHam = async () => {
+    setOpen(!open);
+  };
 
   return (
     <>
       <nav className="w-full flex flex-row items-center justify-between px-3 sm:px-4 md:px-6 lg:px-10 py-4 font-poppins relative">
         {/* Logo-Section 1*/}
-        <NavLink to={'/'} className="flex flex-row items-center">
+        <NavLink to={"/"} className="flex flex-row items-center">
           <img className="h-5 md:h-7 lg:h-10 mr-2" src={logo} alt="logo" />
-          <h1 className="text-[#a7a5dd] font-black text-lg md:text-xl lg:text-2xl ">CryptoTrackr</h1>
+          <h1 className="text-[#a7a5dd] font-black text-lg md:text-xl lg:text-2xl ">
+            CryptoTrackr
+          </h1>
         </NavLink>
 
         {/* Hamburger */}
-        <div onClick={handleHam} className={`cursor-pointer z-50 block md:hidden transition-all duration-150 delay-100 ease-in-out ${open ? "fixed top-5 right-4" : ""} `}>
-          <div className={`w-7 h-[3px] bg-[#e9e9e9] rounded-full mb-1 ${open? 'rotate-45 translate-y-[7px] ': 'rotate-180'}`}></div>
-          <div className={`w-7 h-[3px] bg-[#e9e9e9] rounded-full mb-1 ${open? 'opacity-0 ': 'opacity-100'}`}></div>
-          <div className={`w-7 h-[3px] bg-[#e9e9e9] rounded-full ${open? '-rotate-45 -translate-y-[7px] ': 'rotate-180'}`}></div>
+        <div
+          onClick={handleHam}
+          className={`cursor-pointer z-50 block md:hidden transition-all duration-150 delay-100 ease-in-out ${
+            open ? "fixed top-5 right-4" : ""
+          } `}
+        >
+          <div
+            className={`w-7 h-[3px] bg-[#e9e9e9] rounded-full mb-1 ${
+              open ? "rotate-45 translate-y-[7px] " : "rotate-180"
+            }`}
+          ></div>
+          <div
+            className={`w-7 h-[3px] bg-[#e9e9e9] rounded-full mb-1 ${
+              open ? "opacity-0 " : "opacity-100"
+            }`}
+          ></div>
+          <div
+            className={`w-7 h-[3px] bg-[#e9e9e9] rounded-full ${
+              open ? "-rotate-45 -translate-y-[7px] " : "rotate-180"
+            }`}
+          ></div>
         </div>
-
-
 
         {/* Menu Link - Section 2 */}
         <section className="hidden md:block">
           <ul className="flex flex-row md:gap-x-5 lg:gap-x-10 text-[#e9e9e9] text-base items-center">
-            <NavLink to="/" className="cursor-pointer hover:text-[#a7a5dd] transition-all [&.active]:text-[#a7a5dd]">
+            <NavLink
+              to="/"
+              className="cursor-pointer hover:text-[#a7a5dd] transition-all [&.active]:text-[#a7a5dd]"
+            >
               Home
             </NavLink>
-            <NavLink to="/features" className="cursor-pointer hover:text-[#a7a5dd] transition-all [&.active]:text-[#a7a5dd]">Features</NavLink>
-            <NavLink to="/trending" className="cursor-pointer hover:text-[#a7a5dd] transition-all [&.active]:text-[#a7a5dd]">Trending</NavLink>
-            <NavLink to="/news" className="cursor-pointer hover:text-[#a7a5dd] transition-all [&.active]:text-[#a7a5dd]">News</NavLink>
+            <NavLink
+              to="/features"
+              className="cursor-pointer hover:text-[#a7a5dd] transition-all [&.active]:text-[#a7a5dd]"
+            >
+              Features
+            </NavLink>
+            <NavLink
+              to="/trending"
+              className="cursor-pointer hover:text-[#a7a5dd] transition-all [&.active]:text-[#a7a5dd]"
+            >
+              Trending
+            </NavLink>
+            <NavLink
+              to="/news"
+              className="cursor-pointer hover:text-[#a7a5dd] transition-all [&.active]:text-[#a7a5dd]"
+            >
+              News
+            </NavLink>
           </ul>
         </section>
 
@@ -115,62 +150,100 @@ const Navbar = () => {
             </option>
           </select>
           <button className="flex flex-row items-center bg-[#e9e9e9] hover:bg-[#a7a5dd] transition-all py-1.5 px-2 sm:px-3 rounded-full cursor-pointer">
-            <h1 className="text-[#000421] text-xs md:text-sm lg:text-base font-medium">Sign up</h1>
+            <h1 className="text-[#000421] text-xs md:text-sm lg:text-base font-medium">
+              Sign up
+            </h1>
             <img className="h-2 md:h-3 lg:h-5" src={arrow} alt="arrow" />
           </button>
         </section>
       </nav>
 
       {/* Hamburger-MenuLinks */}
-     {open && <div id="Ham-Links" className="h-screen w-full fixed top-0 bg-gradient-to-b from-[#000421] via-[#20062c] to-[#340732] z-40 inline-flex flex-col justify-between md:hidden py-20 px-10 overflow-hidden" >
-      <section className="">
-          <ul className="flex flex-col items-start text-[#a7a5dd] text-3xl gap-y-5 ">
-            <NavLink to="/"  onClick={()=>setOpen(!open)} className={` cursor-pointer hover:text-[#a7a5dd] transition-all [&.active]:text-[#a7a5dd]`}>
-              Home
-            </NavLink>
-            <NavLink to="/features" onClick={()=>setOpen(!open)} className="cursor-pointer hover:text-[#a7a5dd] transition-all [&.active]:text-[#a7a5dd]">Features</NavLink>
-            <NavLink to="/trending" onClick={()=>setOpen(!open)} className="cursor-pointer hover:text-[#a7a5dd] transition-all [&.active]:text-[#a7a5dd]">Trending</NavLink>
-            <NavLink to="/news" onClick={()=>setOpen(!open)} className="cursor-pointer hover:text-[#a7a5dd] transition-all [&.active]:text-[#a7a5dd]">News</NavLink>
-          </ul>
-        </section>
+      {open && (
+        <div
+          id="Ham-Links"
+          className="h-screen w-full fixed top-0 bg-gradient-to-b from-[#000421] via-[#20062c] to-[#340732] z-40 inline-flex flex-col justify-between md:hidden py-20 px-10 overflow-hidden"
+        >
+          <section className="">
+            <h1
+              className="text-4xl pb-10 font-extrabold underline"
+              style={{
+                WebkitTextStroke: "1px #e9e9e9",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              Navigation
+            </h1>
+            <ul className="flex flex-col items-start text-[#e9e9e9] text-3xl gap-y-5 ">
+              <NavLink
+                to="/"
+                onClick={() => setOpen(!open)}
+                className={` cursor-pointer hover:text-[#a7a5dd] transition-all [&.active]:text-[#a7a5dd]`}
+              >
+                Home
+              </NavLink>
+              <NavLink
+                to="/features"
+                onClick={() => setOpen(!open)}
+                className="cursor-pointer transition-all [&.active]:text-[#a7a5dd]"
+              >
+                Features
+              </NavLink>
+              <NavLink
+                to="/trending"
+                onClick={() => setOpen(!open)}
+                className="cursor-pointer transition-all [&.active]:text-[#a7a5dd]"
+              >
+                Trending
+              </NavLink>
+              <NavLink
+                to="/news"
+                onClick={() => setOpen(!open)}
+                className="cursor-pointer transition-all [&.active]:text-[#a7a5dd]"
+              >
+                News
+              </NavLink>
+            </ul>
+          </section>
 
-        {/* Buttons - Section 3 */}
-        <section className="text-base flex-col items-center font-medium gap-y-3 ">
-          <select
-            onChange={currencyHandler}
-            className="bg-transparent border-2 border-[#a7a5dd] p-2 rounded-md outline-none text-[#e9e9e9] mb-5"
-          >
-            <option className="bg-[#110527]" value="usd">
-              USD
-            </option>
-            <option className="bg-[#110527]" value="eur">
-              EUR
-            </option>
-            <option className="bg-[#110527]" value="inr">
-              INR
-            </option>
-            <option className="bg-[#110527]" value="gbp">
-              GBP
-            </option>
-            <option className="bg-[#110527]" value="aud">
-              AUD
-            </option>
-            <option className="bg-[#110527]" value="jpy">
-              JPY
-            </option>
-            <option className="bg-[#110527]" value="cny">
-              CNY
-            </option>
-            <option className="bg-[#110527]" value="aed">
-              AED
-            </option>
-          </select>
-          <button className="flex flex-row items-center bg-[#e9e9e9] hover:bg-[#a7a5dd] transition-all py-1.5 px-3 rounded-full cursor-pointer">
-            <h1 className="text-[#000421] text-base font-medium">Sign up</h1>
-            <img className="h-5" src={arrow} alt="arrow" />
-          </button>
-        </section>
-      </div>}
+          {/* Buttons - Section 3 */}
+          <section className="text-base flex-col items-center font-medium gap-y-3 ">
+            <select
+              onChange={currencyHandler}
+              className="bg-transparent border-2 border-[#a7a5dd] p-2 rounded-md outline-none text-[#e9e9e9] mb-5"
+            >
+              <option className="bg-[#110527]" value="usd">
+                USD
+              </option>
+              <option className="bg-[#110527]" value="eur">
+                EUR
+              </option>
+              <option className="bg-[#110527]" value="inr">
+                INR
+              </option>
+              <option className="bg-[#110527]" value="gbp">
+                GBP
+              </option>
+              <option className="bg-[#110527]" value="aud">
+                AUD
+              </option>
+              <option className="bg-[#110527]" value="jpy">
+                JPY
+              </option>
+              <option className="bg-[#110527]" value="cny">
+                CNY
+              </option>
+              <option className="bg-[#110527]" value="aed">
+                AED
+              </option>
+            </select>
+            <button className="flex flex-row items-center bg-[#e9e9e9] hover:bg-[#a7a5dd] transition-all py-1.5 px-3 rounded-full cursor-pointer">
+              <h1 className="text-[#000421] text-base font-medium">Sign up</h1>
+              <img className="h-5" src={arrow} alt="arrow" />
+            </button>
+          </section>
+        </div>
+      )}
     </>
   );
 };
