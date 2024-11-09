@@ -166,11 +166,7 @@ const Navbar = () => {
         >
           <section className="">
             <h1
-              className="text-4xl pb-10 font-extrabold underline"
-              style={{
-                WebkitTextStroke: "1px #e9e9e9",
-                WebkitTextFillColor: "transparent",
-              }}
+              className="text-4xl pb-10 font-extrabold text-transparent bg-gradient-to-br from-[#c55cf6] from-[30%] via-[#85025d] to-[#c55cf6] to-[80%] bg-clip-text"
             >
               Navigation
             </h1>
