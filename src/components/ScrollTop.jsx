@@ -22,7 +22,7 @@ const scrollToTop = () => {
 };
   return (
     <>
-      <button onClick={scrollToTop} className={`${props.className} ${visible? "inline-flex":"hidden"} group   h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-neutral-950 font-medium text-neutral-200 shadow-md`}>
+      <button onClick={scrollToTop} className={`${props.className} ${visible? "inline-flex":"hidden"} group  h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-neutral-950 font-medium text-neutral-200 shadow-md`}>
         <div className="translate-y-0 transition group-hover:translate-y-[300%] -rotate-90">
           <svg
             width="15"

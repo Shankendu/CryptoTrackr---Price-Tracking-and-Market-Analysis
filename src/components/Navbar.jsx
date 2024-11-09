@@ -59,7 +59,7 @@ const Navbar = () => {
         {/* Logo-Section 1*/}
         <NavLink to={'/'} className="flex flex-row items-center">
           <img className="h-5 md:h-7 lg:h-10 mr-2" src={logo} alt="logo" />
-          <h1 className="text-[#a7a5dd] font-black text-base sm:text-lg md:text-xl lg:text-2xl ">CryptoTrackr</h1>
+          <h1 className="text-[#a7a5dd] font-black text-lg md:text-xl lg:text-2xl ">CryptoTrackr</h1>
         </NavLink>
 
         {/* Hamburger */}

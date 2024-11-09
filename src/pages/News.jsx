@@ -36,7 +36,7 @@ const News = () => {
   }
   return loading? (<NewsShimmer/>) : (
     <div className="py-12 ">
-    <marquee className="text-4xl font-black font-poppins mb-5" direction="right">Top Headlines</marquee>
+    <h1 className="text-4xl font-black font-poppins mb-5 text-center">Top Headlines</h1>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {Object.values(newsData)
