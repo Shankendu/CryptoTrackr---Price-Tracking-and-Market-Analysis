@@ -1,7 +1,7 @@
 import logo from "../assets/ethereum.png";
 import arrow from "../assets/chevron.png";
 import { NavLink } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { CoinContext } from "../context/CoinContext";
 
 const Navbar = () => {
@@ -52,6 +52,15 @@ const Navbar = () => {
   const handleHam = async () => {
     setOpen(!open);
   };
+
+  useEffect(()=>{
+    if (open) {
+      document.body.classList.add('overflow-hidden')
+    }else{
+      document.body.classList.remove('overflow-hidden')
+    }
+    // return ()=> document.body.classList.remove('overflow-hidden')
+  },[open])
 
   return (
     <>

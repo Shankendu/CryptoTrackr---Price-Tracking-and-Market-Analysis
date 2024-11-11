@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { CoinContext } from "../context/CoinContext";
 import TrendingShimmer from "../components/TrendingShimmer";
+import ScrollTop from "../components/ScrollTop";
 
 const Trending = () => {
   const [trendingCoin, setTrendingCoin] = useState([]);
@@ -67,7 +68,9 @@ const Trending = () => {
             </div>
           );
         })}
+        <ScrollTop className="fixed bottom-14 right-7"/>
       </div>
+
     </>
   );
 };
