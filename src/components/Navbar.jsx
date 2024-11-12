@@ -77,22 +77,17 @@ const Navbar = () => {
         <div
           onClick={handleHam}
           className={`cursor-pointer z-50 block md:hidden transition-all duration-150 delay-100 ease-in-out ${
-            open ? "fixed top-5 right-4" : ""
+            open ? "fixed top-6 right-4" : ""
           } `}
         >
           <div
-            className={`w-7 h-[3px] bg-[#e9e9e9] rounded-full mb-1 ${
-              open ? "rotate-45 translate-y-[7px] " : "rotate-180"
+            className={`w-7 h-[3px] bg-[#e9e9e9] rounded-full mb-1 transition-transform duration-300 delay-75 ${
+              open ? "rotate-45 translate-y-[3.5px] " : "rotate-180"
             }`}
           ></div>
           <div
-            className={`w-7 h-[3px] bg-[#e9e9e9] rounded-full mb-1 ${
-              open ? "opacity-0 " : "opacity-100"
-            }`}
-          ></div>
-          <div
-            className={`w-7 h-[3px] bg-[#e9e9e9] rounded-full ${
-              open ? "-rotate-45 -translate-y-[7px] " : "rotate-180"
+            className={`w-7 h-[3px] bg-[#e9e9e9] rounded-full transition-transform duration-300 delay-75  ${
+              open ? "-rotate-45 -translate-y-[3.5px]" : "rotate-180"
             }`}
           ></div>
         </div>
@@ -168,10 +163,10 @@ const Navbar = () => {
       </nav>
 
       {/* Hamburger-MenuLinks */}
-      {open && (
+      
         <div
           id="Ham-Links"
-          className="h-screen w-full fixed top-0 bg-gradient-to-b from-[#000421] via-[#20062c] to-[#340732] z-40 inline-flex flex-col justify-between md:hidden py-20 px-10 overflow-hidden"
+          className={`${open? "-translate-x-[0] shadow-2xl shadow-black":""} translate-x-[100%] transition-transform duration-[600ms] h-screen w-full fixed top-0 bg-gradient-to-b from-[#000421] via-[#20062c] to-[#340732] z-40 inline-flex flex-col justify-between md:hidden py-20 px-10`}
         >
           <section className="">
             <h1
@@ -248,7 +243,7 @@ const Navbar = () => {
             </button>
           </section>
         </div>
-      )}
+     
     </>
   );
 };
