@@ -166,7 +166,7 @@ const Navbar = () => {
       
         <div
           id="Ham-Links"
-          className={`${open? "translate-x-[0] shadow-2xl shadow-black":""} translate-x-[100%] transition-transform duration-[600ms] h-screen w-full fixed top-0 bg-gradient-to-b from-[#000421] via-[#20062c] to-[#340732] z-40 inline-flex flex-col justify-between md:hidden py-20 px-10`}
+          className={`${open? "translate-x-[0%] shadow-2xl shadow-black":""} translate-x-[100%] transition-transform duration-[600ms] h-screen w-full fixed top-0 bg-gradient-to-b from-[#000421] via-[#20062c] to-[#340732] z-40 inline-flex flex-col justify-between md:hidden py-20 px-10`}
         >
           <section className="">
             <h1
