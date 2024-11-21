@@ -29,7 +29,7 @@ const News = () => {
   };
   useEffect(() => {
     getNews();
-  }, []);
+  }, [newsLimit]);
 
   function getMore() {
     setNewsLimit((prev) => prev + 8);

@@ -38,6 +38,7 @@ const Trending = () => {
       </h1>
       <div className="p-10 flex flex-wrap items-center justify-center gap-10">
         {Object.values(trendingCoin).map((item, index) => {
+          console.log(item)
           return (
             <div
               key={index}
